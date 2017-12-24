@@ -1,17 +1,13 @@
-<p align="center">
-    <a href="https://www.iviewui.com">
-        <img width="200" src="https://file.iviewui.com/logo.svg">
-    </a>
-</p>
 
-# iView-Admin template
+
+# cc-Admin
 [![](https://img.shields.io/travis/iview/iview-admin.svg?style=flat-square)](https://travis-ci.org/iview/iview-admin)
 [![vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
 [![iview ui](https://img.shields.io/badge/iview-2.7.2-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
 
 ## 当前版本：v1.0.0
 
-`注：这是简化之后的模板，去除了所有拓展功能，只留下了基础框架。`
+`注：这个是基于iview-admin template 自己修改的项目，推荐ivew-admin 提供的原版本`
 
 ## Install
 ```bush
@@ -68,4 +64,6 @@ npm run build
 ## License
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present, iView
+Copyright (c) 2016-present, gitors
+
+PoweredBy [ivew-admin]("https://github.com/iview/iview-admin")
