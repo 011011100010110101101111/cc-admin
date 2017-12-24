@@ -64,6 +64,6 @@ npm run build
 ## License
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present, gitors
+Copyright (c) 2016-present, [gitors](http://gitor.org)
 
-PoweredBy [ivew-admin]("https://github.com/iview/iview-admin")
+PoweredBy [ivew-admin](https://github.com/iview/iview-admin)
