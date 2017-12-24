@@ -75,6 +75,36 @@ export const appRouter = [
         ]
     },
     {
+        path: '/userManagement',
+        icon: 'ios-people',
+        name: 'userManagement',
+        title: '会员管理',
+        component: Main,
+        children: [
+            {
+                path: 'level',
+                icon: 'ios-paper-outline',
+                name: 'level',
+                title: '等级管理',
+                component: resolve => { require(['@/views/user/level.vue'], resolve); }
+            },
+            {
+                path: 'level1',
+                icon: 'ios-list-outline',
+                name: 'level1',
+                title: '积分管理',
+                component: resolve => { require(['@/views/user/level1.vue'], resolve); }
+            },
+            {
+                path: 'userList',
+                icon: 'ios-list-outline',
+                name: 'userList',
+                title: '会员管理',
+                component: resolve => { require(['@/views/user/userList.vue'], resolve); }
+            }
+        ]
+    },
+    {
         path: '/page',
         icon: 'ios-paper',
         title: 'Page',

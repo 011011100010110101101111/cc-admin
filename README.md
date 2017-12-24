@@ -66,4 +66,4 @@ npm run build
 
 Copyright (c) 2016-present, [gitors](http://gitor.org)
 
-PoweredBy [ivew-admin](https://github.com/iview/iview-admin)
+PoweredBy [iview-admin](https://github.com/iview/iview-admin)
