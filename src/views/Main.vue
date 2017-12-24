@@ -7,7 +7,7 @@
             <shrinkable-menu 
                 :shrink="shrink"
                 :menu-list="menuList">
-                <div slot="top" class="logo-con">
+                <div slot="top" class="logo-con" @click="goHome">
                     <img v-show="!shrink"  src="../images/logo.jpg" key="max-logo" />
                     <img v-show="shrink" src="../images/logo-min.jpg" key="min-logo" />
                 </div>
@@ -29,6 +29,7 @@
                                     <Icon type="arrow-down-b"></Icon>
                                 </a>
                                 <DropdownMenu slot="list">
+                                    <DropdownItem name="userHome" divided>个人中心</DropdownItem>
                                     <DropdownItem name="loginout" divided>退出登录</DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
@@ -73,7 +74,12 @@ export default {
         },
         handleClickUserDropdown (name) {
             this.$router.push({
-                name: 'login'
+                name: name
+            });
+        },
+        goHome () {
+            this.$router.push({
+                name: 'home_index'
             });
         }
     },
