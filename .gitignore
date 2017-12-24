@@ -7,3 +7,4 @@ node_modules
 \.settings/
 src/config/env.js
 dist
+.ide/
