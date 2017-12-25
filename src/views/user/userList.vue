@@ -5,12 +5,11 @@
     <div class="userList-index">
         <h1>会员管理</h1>
         <Table stripe :columns="columns1" :data="data1"></Table>
-        <button @click="list">lll---------</button>
     </div>
 </template>
 
 <script>
-  /* eslint-disable indent,semi,no-undef,no-empty,no-trailing-spaces */
+  /* eslint-disable indent,semi,no-undef,no-empty,no-trailing-spaces,padded-blocks */
 
   import util from '../../libs/util'
 
@@ -45,17 +44,21 @@
         }
       ],
       data1: []
-    }
-    },
-    methods: {
-      list: function () {
-        util.ajax.get('/user/list').then(function (p) {
-          this.data1 = p.data.data;
-        })
-      },
-      test: function () {
-        alert(this.data1);
       }
-    }
-  };
+
+  },
+  methods: {
+      init () {
+          this.list();
+      },
+      list () {
+          util.ajax.get('/user/list').then(p => {
+              this.data1 = p.data.data;
+          });
+      }
+  },
+  mounted () {
+      this.init();
+  }
+};
 </script>
