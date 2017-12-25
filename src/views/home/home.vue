@@ -22,6 +22,7 @@ export default {
         }
     },
     mounted () {
+      // 初始化页面
         this.init();
     }
 };
