@@ -16,7 +16,7 @@ fs.open('./build/env.js', 'w', function(err, fd) {
 
 module.exports = merge(webpackBaseConfig, {
     output: {
-        publicPath: 'https://iview.github.io/iview-admin/dist/',
+        publicPath: 'https://iview.17open.org/cc-admin/dist/',
         filename: '[name].[hash].js',
         chunkFilename: '[name].[hash].chunk.js'
     },
