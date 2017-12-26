@@ -25,6 +25,7 @@
                                     <Icon :size="14" type="locked"></Icon>
                                 </span>
                             </Input>
+                            <p style="color: red">{{message}}</p>
                         </FormItem>
                         <FormItem>
                             <Button @click="handleSubmit" type="primary" long>登录</Button>
@@ -41,6 +42,7 @@ import Cookies from 'js-cookie';
 export default {
     data () {
         return {
+            message: '',
             form: {
                 userName: '',
                 password: ''
@@ -58,6 +60,14 @@ export default {
     methods: {
         handleSubmit () {
             this.$refs.loginForm.validate((valid) => {
+                if (this.form.userName !== 'admin') {
+                    this.message = '用户名错误';
+                    return;
+                }
+                if (this.form.password !== 'admin') {
+                    this.message = '密码错误';
+                    return;
+                }
                 if (valid) {
                     Cookies.set('user', this.form.userName);
                     this.$router.push({
