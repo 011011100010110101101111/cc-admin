@@ -246,7 +246,6 @@ util.toDefaultPage = function (routers, name, route, next) {
         next();
     }
 };
-
 util.fullscreenEvent = function (vm) {
     // 权限菜单过滤相关
     vm.$store.commit('updateMenulist');
