@@ -9,6 +9,17 @@
 
 `注：这个是基于iview-admin template 自己修改的项目，推荐ivew-admin 提供的原版本`
 
+## 预览地址：
+
+[iview.17open.org](http:iview.17open.org)
+
+- 说明：
+
+```
+预览地址没有请求服务端数据，显示的数据是通过rap mock 的数据
+
+```
+
 ## Install
 ```bush
 // install dependencies
