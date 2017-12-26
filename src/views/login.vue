@@ -12,6 +12,7 @@
                 </p>
                 <div class="form-con">
                     <Form ref="loginForm" :model="form" :rules="rules">
+                        <p>用户名：admin ; 密码：admin</p>
                         <FormItem prop="userName">
                             <Input v-model="form.userName" placeholder="请输入用户名">
                                 <span slot="prepend">

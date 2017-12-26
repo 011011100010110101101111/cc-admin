@@ -74,6 +74,12 @@ export default {
             this.shrink = !this.shrink;
         },
         handleClickUserDropdown (name) {
+            if (name === 'loginout') {
+                Cookies.remove('user');
+                this.$router.push({
+                    name: 'login'
+                });
+            }
             this.$router.push({
                 name: name
             });
