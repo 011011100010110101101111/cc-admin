@@ -14,9 +14,8 @@ util.title = function (title) {
 const ajaxUrl = env === 'development'
     ? 'api'
     : env === 'production'
-    ? 'http://rap2api.taobao.org/app/mock/2571'
+    ? 'http://rap.taobao.org/mockjsdata/30582'
     : 'https://debug.url.com';
-
 util.ajax = axios.create({
     baseURL: ajaxUrl,
     timeout: 30000
@@ -252,7 +251,7 @@ util.fullscreenEvent = function (vm) {
     // 权限菜单过滤相关
     vm.$store.commit('updateMenulist');
 };
-
+// 检查更新
 util.checkUpdate = function (vm) {
     axios.get('https://api.github.com/repos/iview/iview-admin/releases/latest').then(res => {
         let version = res.data.tag_name;
