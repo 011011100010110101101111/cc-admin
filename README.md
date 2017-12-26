@@ -9,6 +9,10 @@
 
 `注：这个是基于iview-admin template 自己修改的项目，推荐ivew-admin 提供的原版本`
 
+本项目采用前后端分离，
+
+[服务端工程地址](https://github.com/gitors/calligraphy)
+
 ## 预览地址：
 
 [iview.17open.org](http:iview.17open.org)
