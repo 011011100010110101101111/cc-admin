@@ -7,7 +7,7 @@ let util = {
 
 };
 util.title = function (title) {
-    title = title || 'test-admin';
+    title = title || 'cc-admin';
     window.document.title = title;
 };
 
