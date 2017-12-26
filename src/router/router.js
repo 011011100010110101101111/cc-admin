@@ -125,7 +125,7 @@ export const appRouter = [
         name: 'Test',
         component: Main,
         children: [
-            { path: 'index', title: 'test', name: 'test_index', component: resolve => { require(['@/views/page/test.vue'], resolve); } }
+            { path: 'path', title: 'test', name: 'test_index', component: resolve => { require(['@/views/page/test.vue'], resolve); } }
         ]
     }
 ];
@@ -135,6 +135,7 @@ export const routers = [
     loginRouter,
     otherRouter,
     ...appRouter,
+    locking,
     page500,
     page403,
     page404
