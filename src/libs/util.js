@@ -14,7 +14,7 @@ util.title = function (title) {
 const ajaxUrl = env === 'development'
     ? 'api'
     : env === 'production'
-    ? 'https://www.url.com'
+    ? 'http://rap2api.taobao.org/app/mock/2571'
     : 'https://debug.url.com';
 
 util.ajax = axios.create({
