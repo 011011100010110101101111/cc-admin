@@ -42,6 +42,7 @@
         <div class="single-page-con" :style="{left: shrink?'60px':'200px'}">
             <div class="single-page">
                 <router-view></router-view>
+                <H1>test</H1>
             </div>
         </div>
     </div>
