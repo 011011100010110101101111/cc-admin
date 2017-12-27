@@ -41,6 +41,11 @@ export const locking = {
     name: 'locking',
     component: resolve => { require(['@/views/locking.vue'], resolve); }
 };
+export const index = {
+    path: '/index',
+    name: 'index',
+    component: resolve => { require(['@/views/public/index.vue'], resolve);}
+};
 // 作为Main组件的子页面展示但是不在左侧菜单显示的路由写在otherRouter里
 // path 是 url,title 显示的名称，name 是路由名称，后面的是路由指向的资源
 export const otherRouter = {
@@ -134,8 +139,9 @@ export const appRouter = [
 export const routers = [
     loginRouter,
     otherRouter,
-    ...appRouter,
+    index,
     locking,
+    ...appRouter,
     page500,
     page403,
     page404
