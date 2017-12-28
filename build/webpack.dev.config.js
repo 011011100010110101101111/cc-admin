@@ -44,5 +44,6 @@ module.exports = merge(webpackBaseConfig, {
             changeOrigin: true
           }
         }
+
       }
 });
