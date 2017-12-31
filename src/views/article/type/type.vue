@@ -1,3 +1,6 @@
+<style lang="less">
+    @import "./type.less";
+</style>
 <template>
     <div>
         <h1>page2</h1>
