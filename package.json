@@ -1,7 +1,7 @@
 {
-  "name": "iview-admin-template",
+  "name": "cc-admin",
   "version": "1.0.0",
-  "description": "a management template bases on iview",
+  "description": "a admin system",
   "main": "index.js",
   "scripts": {
     "init": "webpack --progress --config build/webpack.dev.config.js",
@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iview/iview-admin.git"
+    "url": "https://github.com/gitors/cc-admin.git"
   },
-  "author": "",
+  "author": "liuwenlong",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
