@@ -112,26 +112,6 @@ export const appRouter = [
                 component: resolve => { require(['@/views/user/userList.vue'], resolve); }
             }
         ]
-    },
-    {
-        path: '/page',
-        icon: 'ios-paper',
-        title: 'Page',
-        name: 'page',
-        component: Main,
-        children: [
-            { path: 'index', title: 'Page', name: 'page_index', component: resolve => { require(['@/views/page/page.vue'], resolve); } }
-        ]
-    },
-    {
-        path: '/test',
-        icon: 'ios-paper',
-        title: '系统设置',
-        name: 'Test',
-        component: Main,
-        children: [
-            { path: 'path', title: 'test', name: 'test_index', component: resolve => { require(['@/views/page/test.vue'], resolve); } }
-        ]
     }
 ];
 
