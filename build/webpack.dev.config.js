@@ -36,7 +36,7 @@ module.exports = merge(webpackBaseConfig, {
         })
     ],
       devServer: {
-        port: 8081,
+        port: 8083,
         proxy: {
           '/api': {
             target: 'http://0.0.0.0:8088/',
