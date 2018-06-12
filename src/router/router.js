@@ -53,8 +53,6 @@ export const otherRouter = {
     name: 'otherRouter',
     component: Main,
     children: [
-        { path: 'home', title: {i18n: 'home'}, name: 'home_index', component: resolve => { require(['@/views/home/home.vue'], resolve); } },
-        { path: 'userHome', title: {i18n: 'userHome'}, name: 'userHome', component: resolve => { require(['@/views/user/userHome.vue'], resolve); } }
     ]
 };
 
