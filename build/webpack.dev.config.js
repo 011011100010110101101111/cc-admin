@@ -42,6 +42,7 @@ module.exports = merge(webpackBaseConfig, {
             target: 'http://0.0.0.0:8088/',
             pathRewrite: {'^/api' : ''},
             changeOrigin: true
+
           }
         }
       }
