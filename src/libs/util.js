@@ -13,7 +13,7 @@ util.title = function (title) {
 };
 
 const ajaxUrl = env === 'development'
-    ? 'api'
+    ? 'http://rap2api.taobao.org/app/mock/2571'
     : env === 'production'
     ? 'http://rap.taobao.org/mockjsdata/30582'
     : 'https://debug.url.com';
