@@ -7,7 +7,8 @@ let util = {
 
 };
 util.title = function (title) {
-    title = title || 'cc-admin';
+    let prefix = '程序员社区';
+    title = prefix + '-' + title || prefix;
     window.document.title = title;
 };
 
