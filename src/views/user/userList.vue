@@ -1,5 +1,5 @@
 <style lang="less">
-    @import "userHome.less";
+    @import "./userHome.less";
 </style>
 <template>
     <div class="userList-index">

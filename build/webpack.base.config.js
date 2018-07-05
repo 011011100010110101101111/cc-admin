@@ -20,22 +20,22 @@ module.exports = {
     },
     module: {
         rules: [
-            // {
-            //     test: /\.vue$/,
-            //     loader: 'vue-loader',
-            //     options: {
-            //         loaders: {
-            //             less: ExtractTextPlugin.extract({
-            //                 use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
-            //                 fallback: 'vue-style-loader'
-            //             }),
-            //             css: ExtractTextPlugin.extract({
-            //                 use: ['css-loader', 'autoprefixer-loader'],
-            //                 fallback: 'vue-style-loader'
-            //             })
-            //         }
-            //     }
-            // },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        less: ExtractTextPlugin.extract({
+                            use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
+                            fallback: 'vue-style-loader'
+                        }),
+                        css: ExtractTextPlugin.extract({
+                            use: ['css-loader', 'autoprefixer-loader'],
+                            fallback: 'vue-style-loader'
+                        })
+                    }
+                }
+            },
             {
                 test: /iview\/.*?js$/,
                 loader: 'babel-loader'
@@ -86,7 +86,7 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: ['.js', '.vue'],
+        extensions: ['.js', '.vue','.less'],
         alias: {
             'vue': 'vue/dist/vue.esm.js',
             '@': resolve('../src'),
