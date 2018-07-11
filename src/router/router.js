@@ -1,4 +1,4 @@
-import Main from '@/views/Main.vue';
+import Index from '@/views/public/index.vue';
 
 // 不作为Main组件的子页面展示的页面单独写，如下
 export const loginRouter = {
@@ -49,16 +49,22 @@ export const otherRouter = [
     }
 ];
 // 公共不需要登陆就能看的路由
-export const publicRouter = [
-    {
-        path: '/', name: 'index', component: resolve => { require(['@/views/public/index.vue'], resolve); }
-    }
-];
+export const publicRouter = {
+    path: '/',
+    name: 'publicRouter',
+    redirect: '/home',
+    component: Index,
+    children: [
+        {
+            path: '/', name: 'index', component: resolve => { require(['@/views/commons/articleContent.vue'], resolve); }
+        }
+    ]
+};
 // 所有上面定义的路由都要写在下面的routers里
 export const routers = [
     loginRouter,
     ...otherRouter, // 需要登陆才能访问的路由
-    ...publicRouter,
+    publicRouter,
     locking,
     page500,
     page403,
