@@ -4,7 +4,7 @@ import Util from '../libs/util';
 import VueRouter from 'vue-router';
 
 import Cookies from 'js-cookie';
-import {routers} from './router';
+import {routers, otherRouter} from './router';
 
 Vue.use(VueRouter);
 
@@ -19,7 +19,7 @@ export const router = new VueRouter(RouterConfig);
 router.beforeEach((to, from, next) => {
     iView.LoadingBar.start();
     Util.title(to.meta.title);
-    if (to.name === 'index') {
+    if (!Util.inPublicRouter(otherRouter, to.name)) {
         next(true);
     } else if (Cookies.get('locking') === '1' && to.name !== 'locking') { // 判断当前是否是锁定状态
         next({

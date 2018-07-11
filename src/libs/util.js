@@ -77,7 +77,21 @@ util.getRouterObjByName = function (routers, name) {
 util.handleTitle = function (vm, item) {
     return item.title;
 };
-
+util.inPublicRouter = function (routers,name) {
+    let res = false;
+    if (routers){
+        routers.forEach(item => {
+            if (name === item.name) {
+                res =  true;
+            }else{
+                res =  false;
+            }
+        });
+    }else{
+        res =  false;
+    }
+    return res;
+};
 util.setCurrentPath = function (vm, name) {
     let title = '';
     let isOtherRouter = false;

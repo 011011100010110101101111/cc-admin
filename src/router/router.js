@@ -57,7 +57,7 @@ export const publicRouter = [
 // 所有上面定义的路由都要写在下面的routers里
 export const routers = [
     loginRouter,
-    ...otherRouter,
+    ...otherRouter, // 需要登陆才能访问的路由
     ...publicRouter,
     locking,
     page500,
