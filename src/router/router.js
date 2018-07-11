@@ -41,67 +41,25 @@ export const locking = {
     name: 'locking',
     component: resolve => { require(['@/views/locking.vue'], resolve); }
 };
-export const index = {
-    path: '',
-    name: 'index',
-    component: resolve => { require(['@/views/public/index.vue'], resolve); }
-};
-export const userHome = {
-    path: '/userHome/:userId',
-    name: 'userHome',
-    component: resolve => { require(['@/views/user/userHome.vue'], resolve); }
-};
 // 作为Main组件的子页面展示但是不在左侧菜单显示的路由写在otherRouter里
-// path 是 url,title 显示的名称，name 是路由名称，后面的是路由指向的资源
-export const otherRouter = {
-    path: '/admin',
-    name: 'otherRouter',
-    component: Main,
-    children: [
-    ]
-};
-
-// 作为Main组件的子页面展示并且在左侧菜单显示的路由写在appRouter里
-export const appRouter = [
+// path 是 url,title 显示的名称，name 是路由名称，后面的是路由指向的资源，此部分路由需要登陆以后才有权访问。
+export const otherRouter = [
     {
-        path: '/userManagement',
-        icon: 'ios-people',
-        name: 'userManagement',
-        title: '会员管理',
-        component: Main,
-        children: [
-            {
-                path: 'level',
-                icon: 'ios-paper-outline',
-                name: 'level',
-                title: '等级管理',
-                component: resolve => { require(['@/views/user/level.vue'], resolve); }
-            },
-            {
-                path: 'level1',
-                icon: 'ios-list-outline',
-                name: 'level1',
-                title: '积分管理',
-                component: resolve => { require(['@/views/user/level1.vue'], resolve); }
-            },
-            {
-                path: 'userList',
-                icon: 'ios-list-outline',
-                name: 'userList',
-                title: '会员管理',
-                component: resolve => { require(['@/views/user/userList.vue'], resolve); }
-            }
-        ]
+        path: '/userHome/:userId', name: 'userHome', component: resolve => { require(['@/views/user/userHome.vue'], resolve); }
     }
 ];
-
+// 公共不需要登陆就能看的路由
+export const publicRouter = [
+    {
+        path: '/', name: 'index', component: resolve => { require(['@/views/public/index.vue'], resolve); }
+    }
+];
 // 所有上面定义的路由都要写在下面的routers里
 export const routers = [
     loginRouter,
-    otherRouter,
-    index,
+    ...otherRouter,
+    ...publicRouter,
     locking,
-    ...appRouter,
     page500,
     page403,
     page404
