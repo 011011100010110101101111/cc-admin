@@ -56,7 +56,10 @@ export const publicRouter = {
     component: Index,
     children: [
         {
-            path: '/', name: 'index', component: resolve => { require(['@/views/commons/articleContent.vue'], resolve); }
+            path: '/article/:id', name: 'article', component: resolve => { require(['@/views/commons/articleContent.vue'], resolve); }
+        },
+        {
+            path: '/', name: 'index', component: resolve => { require(['@/views/public/list.vue'], resolve); }
         }
     ]
 };
