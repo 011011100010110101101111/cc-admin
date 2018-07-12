@@ -45,7 +45,7 @@ export const locking = {
 // path 是 url,title 显示的名称，name 是路由名称，后面的是路由指向的资源，此部分路由需要登陆以后才有权访问。
 export const otherRouter = [
     {
-        path: '/userHome/:userId', name: 'userHome', component: resolve => { require(['@/views/user/userHome.vue'], resolve); }
+        path: '/userHome/:userId', name: 'userHome2', component: resolve => { require(['@/views/user/userHome.vue'], resolve); }
     }
 ];
 // 公共不需要登陆就能看的路由
@@ -60,6 +60,9 @@ export const publicRouter = {
         },
         {
             path: '/', name: 'index', component: resolve => { require(['@/views/public/list.vue'], resolve); }
+        },
+        {
+            path: '/userHome/:userId', name: 'userHome', component: resolve => { require(['@/views/user/userHome.vue'], resolve); }
         }
     ]
 };
