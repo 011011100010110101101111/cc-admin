@@ -56,10 +56,10 @@ export const publicRouter = {
     component: Index,
     children: [
         {
-            path: '/article/:id', name: 'article', component: resolve => { require(['@/views/commons/articleContent.vue'], resolve); }
+            path: '/article/:id', name: 'article', component: resolve => { require(['@/views/article/articleContent.vue'], resolve); }
         },
         {
-            path: '/', name: 'index', component: resolve => { require(['@/views/public/list.vue'], resolve); }
+            path: '/', name: 'index', component: resolve => { require(['@/views/article/list.vue'], resolve); }
         },
         {
             path: '/userHome/:userId', name: 'userHome', component: resolve => { require(['@/views/user/userHome.vue'], resolve); }
