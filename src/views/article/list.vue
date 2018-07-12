@@ -2,7 +2,7 @@
     <Card >
         <p >
             <ul>
-                <li v-for="item in articleList">
+                <li v-for="item in articleList" style="margin-top: 8px">
                     <a @click="clickArticle(item.id)">
                         {{item.name}}
                     </a>
