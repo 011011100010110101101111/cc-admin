@@ -7,8 +7,12 @@ let util = {
 
 };
 util.title = function (title) {
-    let prefix = '程序员社区';
-    title = prefix + '-' + title || prefix;
+    let suffix = '程序员社区';
+    if (title) {
+        title = title + '-' + suffix;
+    } else {
+        title = suffix;
+    }
     window.document.title = title;
 };
 

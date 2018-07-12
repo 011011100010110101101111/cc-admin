@@ -1,41 +1,44 @@
+<style>
+    ul{
+
+    }
+</style>
 <template>
-    <Card >
-        <p >
-            <ul>
-                <li v-for="item in articleList" style="margin-top: 8px">
-                    <a @click="clickArticle(item.id)">
-                        {{item.name}}
-                    </a>
-                </li>
-            </ul>
-        </p>
+    <Card>
+        <ul>
+            <li v-for="item in articleList" style="margin-top: 8px">
+                <a @click="clickArticle(item.id)">
+                    {{item.name}}
+                </a>
+            </li>
+        </ul>
     </Card>
 </template>
 <script>
-    export  default {
+    export default {
         data () {
             return {
                 articleList: [
-                    {name: '你好，这是一篇测试文章',id: 1},
-                    {name: '你好，这是第二篇测试文章',id: 2},
-                    {name: '你好，这是一篇测试文章',id: 1},
-                    {name: '你好，这是第二篇测试文章',id: 2},
-                    {name: '你好，这是一篇测试文章',id: 1},
-                    {name: '你好，这是第二篇测试文章',id: 2}
+                    {name: '你好，这是一篇测试文章', id: 1},
+                    {name: '你好，这是第二篇测试文章', id: 2},
+                    {name: '你好，这是一篇测试文章', id: 1},
+                    {name: '你好，这是第二篇测试文章', id: 2},
+                    {name: '你好，这是一篇测试文章', id: 1},
+                    {name: '你好，这是第二篇测试文章', id: 2}
                 ]
-            }
+            };
         },
         methods: {
-            clickArticle(id) {
+            clickArticle (id) {
                 let params = {
                     id: id
                 };
                 this.$router.push({
                     name: 'article',
                     params: params
-                })
+                });
             }
         }
-    }
+    };
 </script
 >
