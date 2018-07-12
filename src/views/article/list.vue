@@ -1,9 +1,13 @@
 <template>
     <Card >
-        <p v-for="item in articleList">
-            <a @click="clickArticle(item.id)">
-                {{item.name}}
-            </a>
+        <p >
+            <ul>
+                <li v-for="item in articleList">
+                    <a @click="clickArticle(item.id)">
+                        {{item.name}}
+                    </a>
+                </li>
+            </ul>
         </p>
     </Card>
 </template>

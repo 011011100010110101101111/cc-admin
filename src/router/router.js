@@ -44,9 +44,6 @@ export const locking = {
 // 作为Main组件的子页面展示但是不在左侧菜单显示的路由写在otherRouter里
 // path 是 url,title 显示的名称，name 是路由名称，后面的是路由指向的资源，此部分路由需要登陆以后才有权访问。
 export const otherRouter = [
-    {
-        path: '/userHome/:userId', name: 'userHome2', component: resolve => { require(['@/views/user/userHome.vue'], resolve); }
-    }
 ];
 // 公共不需要登陆就能看的路由
 export const publicRouter = {
