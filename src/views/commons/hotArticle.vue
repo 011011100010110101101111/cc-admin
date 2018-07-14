@@ -5,7 +5,7 @@
                 <Icon type="fireball"></Icon>
                 热门文章
             </p>
-            <a href="#" slot="extra" @click.prevent="">
+            <a href="#" slot="extra" @click.prevent="a">
                 <Icon type="more"></Icon>
             </a>
             <div class="preview-placeholderCon">
@@ -25,6 +25,11 @@ export default {
         { id: "1", name: "测试" }
       ]
     };
+  },
+  methods: {
+      a () {
+
+      }
   }
 };
 </script>

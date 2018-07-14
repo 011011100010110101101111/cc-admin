@@ -9,7 +9,7 @@
                 <Icon type="more"></Icon>
             </a>
             <ul>
-                <li v-for="item in randomMovieList">
+                <li v-for="item in randomMovieList" :key="item.rate">
                     <a :href="item.url" target="_blank">{{ item.name }}</a>
                     <span>
                         <Icon type="ios-star" v-for="n in 4" :key="n"></Icon>
