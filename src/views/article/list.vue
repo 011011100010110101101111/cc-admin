@@ -5,13 +5,32 @@
 .arcitleListCard a {
     color: #4a5161;
 }
+.aouther{
+    margin-bottom: 8px;
+}
 </style>
 <template>
     <div>
         <Row>
             <i-col span="24" v-for="item in articleList" :key="item.id" class="arcitleListCard">
                 <Card @click="clickArticle(item.id)" dis-hover >
-                    <a @click="clickArticle(item.id)" href="">{{item.name}}</a>
+                    <Row>
+                        <i-col span="3">
+                            <Avatar style="background-color: #87d068" icon="person" />
+                        </i-col>
+                        <i-col span="21">
+                            <Row>
+                                <i-col>
+                                    刘文龙
+                                </i-col>    
+                            </Row>
+                            <Row>
+                                <i-col>
+                                    <a @click="clickArticle(item.id)" href="">{{item.name}}</a>
+                                </i-col>    
+                            </Row>
+                        </i-col>
+                    </Row>
                 </Card>
             </i-col>
         </Row>
