@@ -2,13 +2,16 @@
 .arcitleListCard{
     margin-bottom: 8px;
 }
+.arcitleListCard a {
+    color: #4a5161;
+}
 </style>
 <template>
     <div>
         <Row>
             <i-col span="24" v-for="item in articleList" :key="item.id" class="arcitleListCard">
                 <Card @click="clickArticle(item.id)" dis-hover >
-                    {{item.name}}
+                    <a @click="clickArticle(item.id)" href="">{{item.name}}</a>
                 </Card>
             </i-col>
         </Row>

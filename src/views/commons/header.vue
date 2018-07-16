@@ -1,5 +1,5 @@
 <!--头部组件-->
-<style>
+<style style scoped>
 .preview-header {
     padding-right: 10%;
     height: 60px;
