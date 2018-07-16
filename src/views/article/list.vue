@@ -1,6 +1,6 @@
-<style>
-    ul{
-
+<style scoped>
+    ul>li{
+        color: #cccccc
     }
 </style>
 <template>
