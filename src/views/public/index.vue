@@ -1,4 +1,4 @@
-<style scoped>
+<style>
     @import '../../styles/common.less';
     @import './index.less';
 </style>
