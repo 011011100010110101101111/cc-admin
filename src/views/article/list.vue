@@ -1,18 +1,18 @@
 <style scoped>
-    ul>li{
-        color: #cccccc
-    }
+.arcitleListCard{
+    margin-bottom: 8px;
+}
 </style>
 <template>
-    <Card>
-        <ul>
-            <li v-for="item in articleList" :key="item.id" style="margin-top: 8px">
-                <a @click="clickArticle(item.id)">
+    <div>
+        <Row>
+            <i-col span="24" v-for="item in articleList" :key="item.id" class="arcitleListCard">
+                <Card @click="clickArticle(item.id)" dis-hover >
                     {{item.name}}
-                </a>
-            </li>
-        </ul>
-    </Card>
+                </Card>
+            </i-col>
+        </Row>
+    </div>
 </template>
 <script>
     export default {
