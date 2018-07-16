@@ -1,12 +1,14 @@
-<style>
+<style scoped>
 .arcitleListCard{
     margin-bottom: 8px;
 }
-.arcitleListCard a {
+.arcitleListCard a{
     color: #4a5161;
+    font-size: 18px;
 }
-.arcitleListCard a:hover {
+.arcitleListCard a:hover{
     text-decoration:underline;
+    color: black
 }
 .aoutherPortrait{
     float: left;

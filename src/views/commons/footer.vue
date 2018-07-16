@@ -1,5 +1,5 @@
 <!--底部模块-->
-<style>
+<style scoped>
 .preview-footor{
          height: auto;
          background: #4a5161;
