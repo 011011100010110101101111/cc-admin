@@ -12,6 +12,7 @@
             </i-col>
             <i-col span="5" class="padding-left-10">
                 <user-info></user-info>
+                <labels></labels>
                 <hotArticle></hotArticle>
                 <newest-article></newest-article>
             </i-col>
@@ -27,6 +28,7 @@
     import articleContent from '../article/articleContent.vue';
     import newestArticle from '../commons/newestArticle.vue';
     import hotArticle from '../commons/hotArticle.vue';
+    import labels from '../commons/label.vue';
     export default {
         data () {
             return {
@@ -39,7 +41,8 @@
             'userInfo': userInfo,
             'articleContent': articleContent,
             'newestArticle': newestArticle,
-            'hotArticle': hotArticle
+            'hotArticle': hotArticle,
+            'labels': labels
         },
         methods: {
             login () {
