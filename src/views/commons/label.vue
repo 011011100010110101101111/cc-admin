@@ -1,5 +1,5 @@
 <template>
-    <div class="margin-top=10px;">
+    <div class="margin-top-10">
         <Card>
             <a v-for="item in labelList" :key="item.id">{{item.label}}</a>
         </Card>
@@ -20,8 +20,5 @@ export default {
     }
 }
 </script>
-<style scoped>
-
-</style>
 
 

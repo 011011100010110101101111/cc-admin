@@ -1,6 +1,9 @@
-<style>
-    /* @import '../../styles/common.less'; */
+// 全局样式和本地样式分开写
+<style scoped>
     @import './index.less';
+</style>
+<style>
+    @import '../../styles/common.less';
 </style>
 
 <template>
