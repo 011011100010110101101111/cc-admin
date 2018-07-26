@@ -1,5 +1,5 @@
 <style>
-    @import '../../styles/common.less';
+    /* @import '../../styles/common.less'; */
     @import './index.less';
 </style>
 
