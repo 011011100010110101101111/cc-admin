@@ -1,7 +1,14 @@
 <template>
     <div class="margin-top-10">
         <Card>
-            <a v-for="item in labelList" :key="item.id">{{item.label}}</a>
+            <p slot="title">
+                <Icon type="ios-lightbulb"></Icon>
+                热门标签
+            </p>
+            <a href="#" slot="extra" content="标签墙……">
+                <Icon type="more"></Icon>
+            </a>
+            <a class="label-content" style="font-size:15px;" v-for="item in labelList" :key="item.id">{{item.label}}</a>
         </Card>
     </div>
 </template>
@@ -20,5 +27,10 @@ export default {
     }
 }
 </script>
+<style scoped>
+.label-content {
+    margin: 2px;
+}
+</style>
 
 
