@@ -31,7 +31,9 @@ ul {
                     中间件
                 </MenuItem>
                 <MenuItem name = "6">
-                    <i-input v-model="value" placeholder="Search something..." style="width: 200px;" @on-enter="search"></i-input>
+                    <Tooltip content="回车搜索……" placement="bottom">
+                        <i-input v-model="value" placeholder="Search something..." style="width: 200px;" @on-enter="search"></i-input>
+                    </Tooltip>
                 </MenuItem>
                 <MenuItem name="5">
                     <div v-if="!logined"> 登陆 - 注册</div>
@@ -99,7 +101,7 @@ export default {
             alert('搜索关键词：' + this.value);
         },
         menuSelected (name) {
-            if (name !== '5'){
+            if (name !== '5' && name !== '6'){
                 this.$router.push({
                     name: name
                 });
